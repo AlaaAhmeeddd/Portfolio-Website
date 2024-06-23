@@ -1,47 +1,11 @@
 "use client"
 import { motion } from 'framer-motion'
-import { FaHtml5, FaCss3, FaJs, FaReact, FaFigma, FaNodeJs } from 'react-icons/fa'
-import { SiTailwindcss, SiNextdotjs } from 'react-icons/si'
-import { education, about, experience } from '@/components/data'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import ExperienceTab from '@/components/ExperienceTab'
+import EducationTab from '@/components/EducationTab'
+import SkillsTab from '@/components/SkillsTab'
+import AboutTab from '@/components/AboutTab'
 
-const skills = {
-  title: "My skills",
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  skillsList: [
-      {
-          icon: <FaHtml5 />,
-          name: 'HTML 5',
-      },
-      {
-          icon: <FaCss3 />,
-          name: 'CSS 3',
-      },
-      {
-          icon: <FaJs />,
-          name: 'JavaScript',
-      },
-      {
-          icon: <FaReact />,
-          name: 'React.JS',
-      },
-      {
-          icon: <SiNextdotjs />,
-          name: 'Next.JS',
-      },
-      {
-          icon: <SiTailwindcss />,
-          name: 'Tailwind.CSS',
-      },
-      {
-          icon: <FaFigma />,
-          name: 'Figma',
-      },
-      {
-          icon: <FaNodeJs />,
-          name: 'Node.Js',
-      },
-  ]
-}
 
 export default function page() {
   return (
@@ -53,10 +17,35 @@ export default function page() {
         duration: 0.4,
         ease: 'easeInOut'
       }}
-      className='h-full'
+      className='h-full py-10'
     >
       <div className='container mx-auto xl:px-10'>
-        page
+        <Tabs defaultValue="experience" className="flex xl:flex-row flex-col gap-[60px]">
+          <TabsList className="max-w-[300px] w-full flex flex-col mx-auto xl:mx-0">
+            <div className="lg:block hidden m-0">
+              <p className='text-4xl font-semibold'>Why hire me?</p>
+              <p className='text-white/80 text-sm mt-6 max-w-[300px] leading-loose'>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
+            </div>
+            <TabsTrigger value="experience">Experience</TabsTrigger>
+            <TabsTrigger value="education">Education</TabsTrigger>
+            <TabsTrigger value="skills">Skills</TabsTrigger>
+            <TabsTrigger value="about">About me</TabsTrigger>
+          </TabsList>
+          <TabsContent value="experience">
+            <ExperienceTab />
+          </TabsContent>
+          <TabsContent value="education">
+            <EducationTab />
+          </TabsContent>
+          <TabsContent value="skills">
+            <SkillsTab />
+          </TabsContent>
+          <TabsContent value="about">
+            <AboutTab />
+          </TabsContent>
+        </Tabs>
       </div>
     </motion.div>
   )

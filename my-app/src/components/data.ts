@@ -118,7 +118,7 @@ export const education = {
     items: [
         {
         institution: "Online Course Platform",
-        position: "Full Stack Development Bootcamp",
+        position: "Full Stack Web Development Bootcamp",
         duration: "2023"
         },
         {
