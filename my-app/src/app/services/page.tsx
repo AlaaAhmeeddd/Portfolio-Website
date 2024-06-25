@@ -4,7 +4,7 @@ import React from 'react'
 
 export default function page() {
   return (
-    <div className='h-full xl:py-14 py-8'>
+    <div className='h-full py-10'>
       <div className='container mx-auto xl:px-10'>
         <Service servicesObj={servicesData}/>
       </div>

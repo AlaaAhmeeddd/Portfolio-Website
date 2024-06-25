@@ -9,12 +9,12 @@ export default function AboutTab() {
             </div>
             <div className='grid xl:grid-cols-2 grid-cols-1 gap-x-[60px] gap-y-4 mt-10'>
                 {
-                about.info.map((information, index)=>(
-                    <div key={index} className="flex gap-3 items-center xl:justify-start justify-center">
-                    <p className="text-sm text-white/80 font-bold">{information.fieldName}</p>
-                    <p>{information.fieldValue}</p>
-                    </div>
-                ))
+                    about.info.map((information, index)=>(
+                        <div key={index} className="flex gap-3 items-center xl:justify-start justify-center">
+                        <p className="text-sm text-white/80 font-bold">{information.fieldName}</p>
+                        <p>{information.fieldValue}</p>
+                        </div>
+                    ))
                 }
             </div>
         </>

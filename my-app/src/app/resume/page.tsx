@@ -6,17 +6,12 @@ import EducationTab from '@/components/EducationTab'
 import SkillsTab from '@/components/SkillsTab'
 import AboutTab from '@/components/AboutTab'
 
-
 export default function page() {
   return (
     <motion.div
       initial={{opacity: 0}}
       animate={{opacity: 1}}
-      transition={{
-        delay: 2.4,
-        duration: 0.4,
-        ease: 'easeInOut'
-      }}
+      transition={{ delay: 2.4, duration: 0.4, ease: 'easeInOut' }}
       className='h-full py-10'
     >
       <div className='container mx-auto xl:px-10'>
