@@ -1,2 +1,2 @@
 # Portfolio-Website
-Portfolio Website Using Next JS, Tailwind CSS &amp; Framer Motion
+Portfolio Website Using Next JS, Tailwind CSS, Shadcn, &amp; Framer Motion
